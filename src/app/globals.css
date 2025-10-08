@@ -24,3 +24,128 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Local font declarations matching reino_update */
+@font-face {
+  font-family: 'authentic_n';
+  src: url('/fonts/autentic/AUTHENTICSans-90.woff2') format('woff2'), url('/fonts/autentic/AUTHENTICSans-90.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'authentic_b';
+  src: url('/fonts/autentic/AUTHENTICSans-130.woff2') format('woff2'), url('/fonts/autentic/AUTHENTICSans-130.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'authentic_l';
+  src: url('/fonts/autentic/AUTHENTICSans-60.woff2') format('woff2'), url('/fonts/autentic/AUTHENTICSans-60.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'terminal';
+  src: url('/fonts/terminal-grotesque-webfont.woff2') format('woff2'), url('/fonts/terminal-grotesque-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'sligoil';
+  src: url('/fonts/Sligoil-Micro.woff2') format('woff2'), url('/fonts/Sligoil-Micro.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'proto';
+  src: url('/fonts/Proto Sans 54/Proto.woff') format('woff'), url('/fonts/Proto Sans 54/Proto Sans 54.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-authentic-n: 'authentic_n', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --font-authentic-b: 'authentic_b', var(--font-authentic-n);
+  --font-authentic-l: 'authentic_l', var(--font-authentic-n);
+  --font-terminal: 'terminal', var(--font-authentic-n);
+  --font-sligoil: 'sligoil', var(--font-authentic-n);
+  --font-proto: 'proto', var(--font-authentic-n);
+    
+}
+
+/* Utility font classes used by the project */
+.font-Authentic_n { font-family: var(--font-authentic-n); }
+.font-Authentic_b { font-family: var(--font-authentic-b); }
+.font-Authentic_l { font-family: var(--font-authentic-l); }
+.font-Terminal { font-family: var(--font-terminal); }
+.font-Sligoil { font-family: var(--font-sligoil); }
+.font-Proto { font-family: var(--font-proto); }
+
+/* Only palette-6 is used now (Coolors palette). Toggle the class `palette-6` on <html>. */
+
+/* Static UI variables: white backgrounds, sensible defaults for colors */
+:root {
+  --p1: #ffe05a; /* yellow */
+  --p2: #ed143d; /* orange/red */
+  --p3: #0581fe; /* blue */
+  --bg-main: var(--p1);
+  --card-bg: var(--p1);
+  --text-main: var(--p2); /* primary text */
+  --muted: var(--p2); /* muted labels */
+  /* User palette (mapped) */
+  --accent: var(--p2); /* primary accent for buttons/links */
+  --nav-active: var(--p2); /* nav highlight */
+  --nav-inactive: var(--p2);
+  --aside-left-bg: var(--p1);
+  --aside-right-bg: var(--p1);
+  --aside-font: var(--p2);
+  background-color: var(--p1);
+}
+body {
+  background-color: var(--p1);
+}
+
+/* Helper classes that use palette variables */
+.bg-main { background: var(--bg-main); }
+.card-bg { background: var(--card-bg); }
+.text-nav-active { color: var(--nav-active); }
+.text-nav-inactive { color: var(--nav-inactive); }
+.border-accent { border-color: var(--accent); }
+.text-accent { color: var(--accent); }
+.reinatch-logo { letter-spacing: 0.04em; }
+
+/* small helpers mapping the new palette */
+.text-p1 { color: var(--p1); }
+.text-p2 { color: var(--p2); }
+.text-p3 { color: var(--p3); }
+.bg-p1 { background: var(--p1); }
+.bg-p2 { background: var(--p2); }
+.bg-p3 { background: var(--p3); }
+
+.text-main { color: var(--text-main); }
+.text-muted { color: var(--muted); }
+
+/* Palette swatches used in the switcher */
+.palette-swatch { width: 28px; height: 18px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.08); }
+.palette-swatch-btn { padding: 3px; border-radius: 6px; display:inline-flex; align-items:center; justify-content:center; }
+
+/* Aside helper classes */
+.aside-left-bg { background: var(--aside-left-bg); }
+.aside-right-bg { background: var(--aside-right-bg); }
+.text-aside { color: var(--aside-font); }
+
+/* Hide scrollbars but keep scrolling functionality across browsers */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
