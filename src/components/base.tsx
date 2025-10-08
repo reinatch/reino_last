@@ -36,10 +36,10 @@ const ProjectList: React.FC = () => {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full">
       {/* Left navigation aside */}
-  <aside className="md:w-1/5 w-full p-8 aside-left-bg md:h-full text-aside ">
+  <aside className="md:w-1/4 w-full p-8 aside-left-bg md:h-full text-aside ">
         {/* Title / Logo */}
         <div className="mb-6">
-          <div className="text-[2em] font-Terminal reinatch-logo text-nav-inactive">reinatch</div>
+          <div className="text-[3em] font-Proto reinatch-logo ">reinatch</div>
         </div>
         
         <div className="flex flex-col justify-between h-full">
@@ -50,7 +50,7 @@ const ProjectList: React.FC = () => {
             <button
               key={p.titulo}
               onClick={() => setActiveIndex(i)}
-              className={`block w-full text-left uppercase text-xl tracking-wider ${i === activeIndex ? 'font-Proto text-nav-active' : 'font-Authentic_l text-nav-inactive'}`}
+              className={`block w-full text-left uppercase text-xl tracking-wider ${i === activeIndex ? 'font-Frame text-nav-active' : 'font-Authentic_l text-nav-inactive'}`}
             >
               {p.titulo}
             </button>
@@ -66,8 +66,8 @@ const ProjectList: React.FC = () => {
         <aside className="md:w-full w-full py-8 aside-right-bg hidden md:block text-aside">
               {typeof activeIndex === 'number' ? (
                 <div className="sticky top-8 space-y-4">
-                  <div className="font-Authentic_n text-base text-aside hidden md:block">
-                    {/* <p>{data[activeIndex].content}</p> */}
+                  <div className="font-Authentic_n text-xl font-Acte  hidden md:block">
+                    <p>{data[activeIndex].content}</p>
                   </div>
                   <div className="uppercase text-xs text-muted">designed by</div>
                   <div className="text-xl uppercase font-Authentic_b mt-2">{data[activeIndex].designer}</div>
@@ -98,7 +98,7 @@ const ProjectList: React.FC = () => {
       {/* Main center content */}
   <main className="flex-1 p-8 overflow-auto bg-main no-scrollbar">
         {typeof activeIndex === 'number' && (
-          <article className="max-w-6xl mx-auto">
+          <article className="max-w-6xl ">
             <div className="mb-6">
               {/* <div className="text-3xl font-Terminal mb-4">{data[activeIndex].titulo}</div> */}
               {/* Preview image or gif (if provided) */}

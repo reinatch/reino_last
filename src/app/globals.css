@@ -69,6 +69,57 @@ body {
   font-display: swap;
 }
 
+/* Fonts from /public/fonts/love/ */
+@font-face {
+  font-family: 'Acte';
+  src: url('/fonts/love/Acte.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Frame';
+  src: url('/fonts/love/Frame.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Panton';
+  src: url('/fonts/love/Panton.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SIMPLE';
+  src: url('/fonts/love/SIMPLE.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SpaceNotoriousRounded';
+  src: url('/fonts/love/SpaceNotoriousRounded.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Stairs';
+  src: url('/fonts/love/Stairs.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'der75';
+  src: url('/fonts/love/der75.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-authentic-n: 'authentic_n', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   --font-authentic-b: 'authentic_b', var(--font-authentic-n);
@@ -76,6 +127,14 @@ body {
   --font-terminal: 'terminal', var(--font-authentic-n);
   --font-sligoil: 'sligoil', var(--font-authentic-n);
   --font-proto: 'proto', var(--font-authentic-n);
+  /* love/ fonts */
+  --font-acte: 'Acte', var(--font-authentic-n);
+  --font-frame: 'Frame', var(--font-authentic-n);
+  --font-panton: 'Panton', var(--font-authentic-n);
+  --font-simple: 'SIMPLE', var(--font-authentic-n);
+  --font-space-notorious-rounded: 'SpaceNotoriousRounded', var(--font-authentic-n);
+  --font-stairs: 'Stairs', var(--font-authentic-n);
+  --font-der75: 'der75', var(--font-authentic-n);
     
 }
 
@@ -86,13 +145,21 @@ body {
 .font-Terminal { font-family: var(--font-terminal); }
 .font-Sligoil { font-family: var(--font-sligoil); }
 .font-Proto { font-family: var(--font-proto); }
+/* Utility classes for love/ fonts */
+.font-Acte { font-family: var(--font-acte); }
+.font-Frame { font-family: var(--font-frame); }
+.font-Panton { font-family: var(--font-panton); }
+.font-SIMPLE { font-family: var(--font-simple); }
+.font-SpaceNotoriousRounded { font-family: var(--font-space-notorious-rounded); }
+.font-Stairs { font-family: var(--font-stairs); }
+.font-der75 { font-family: var(--font-der75); }
 
 /* Only palette-6 is used now (Coolors palette). Toggle the class `palette-6` on <html>. */
 
 /* Static UI variables: white backgrounds, sensible defaults for colors */
 :root {
-  --p1: #ffe05a; /* yellow */
-  --p2: #ed143d; /* orange/red */
+  --p1: #fec700; /* yellow */
+  --p2: #e32400; /* orange/red */
   --p3: #0581fe; /* blue */
   --bg-main: var(--p1);
   --card-bg: var(--p1);
@@ -114,8 +181,8 @@ body {
 /* Helper classes that use palette variables */
 .bg-main { background: var(--bg-main); }
 .card-bg { background: var(--card-bg); }
-.text-nav-active { color: var(--nav-active); }
-.text-nav-inactive { color: var(--nav-inactive); }
+.text-nav-active { color: var(--nav-active);  font-size: 2em; }
+.text-nav-inactive { color: var(--nav-inactive); font-family: var(--font-der75);}
 .border-accent { border-color: var(--accent); }
 .text-accent { color: var(--accent); }
 .reinatch-logo { letter-spacing: 0.04em; }
